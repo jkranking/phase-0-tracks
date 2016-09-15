@@ -17,3 +17,5 @@ A commit is a tool in Git in which one creates save points of versions of your c
 * What is a merge conflict?
 
 A merge conflict is a problem that occurs where two separate branches cannot be merged because of overlapping changes on both branches. One must fix the changes in a text editor before merging.  
+
+* Changes, changes changes, changes!
