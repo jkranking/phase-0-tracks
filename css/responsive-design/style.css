@@ -1,6 +1,6 @@
 body {
   max-width: 960px;
-  min-width: 500px;
+  min-width: 200px;
 }
 
 blockquote {
@@ -54,6 +54,7 @@ figcaption {
   #external-links {
     display: block;
     width: 100%;
+    text-align: center;
   }
 
   main {
