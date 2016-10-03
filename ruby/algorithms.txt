@@ -1,0 +1,27 @@
+Elevator Algorithm
+
+There are floors 1-9 in the building
+
+until floors is 1-9
+
+Request "What floor do you want to go to, floor 1-9?" to the robot
+
+  if (robot-response) is 1-9
+
+  tell the robot to "push the (robot-response) button"
+
+  else puts "that floor does not exist"
+
+
+
+
+
+Caffeine Algorithm
+
+Barista requests what I want to drink?
+
+if request is made before 10:00 am then ask for a large coffee
+
+if request is made after 10:00 am but before 3:00 pm then ask for a small coffee
+
+else ask for a decaf tea.  
