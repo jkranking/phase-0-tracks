@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+  display: block;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.column-1, .column-2 {
+  max-width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  border: 1px dotted gray;
+  margin-top: 10px;
+}
+
+h1, h2, h3, p, a {
+  font-family: 'Helvetica', sans-serif;
+}
+
+article {
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: CornflowerBlue;
+}
+
+details:nth-child(even) {
+  background-color: Lavender;
+}
+details:nth-child(odd) {
+  background-color: LightGray;
+}
+details:nth-child(odd) {
+  border-bottom: 1px solid DarkGray;
+}
+details:nth-child(even) {
+  border-bottom: 1px solid Black;
+}
+a {
+  color: DodgerBlue;
+}
+ul {
+  list-style-type: lower-greek;
+}
