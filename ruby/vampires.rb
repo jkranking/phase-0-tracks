@@ -1,6 +1,13 @@
 
+puts "How many employees will be processed?"
 
-puts "What is your name?"
+  employees = gets.chomp.to_i
+
+  number_of_employees = 0
+
+until number_of_employees == employees
+
+  puts "What is your name?"
 
   name = gets.chomp
 
@@ -14,7 +21,7 @@ puts "What year were you born?"
 
   if 2016 - birth_year == age
 
-  correct_age = true 
+    correct_age = true 
 
   else correct_age = false 
 
@@ -38,11 +45,27 @@ puts "Would you like to enroll in the company's health insurance? Yes or No"
 
   if insurance == "yes"
 
-  wants_insurance = true 
+    wants_insurance = true 
 
   else wants_insurance = false
 
   end 
+
+
+number_of_allergies = true 
+
+until number_of_allergies == false 
+
+  puts "Do you have any allergies? If so type the allergy one at a time and hit enter. Type done if finished"
+
+  allergy = gets.chomp
+
+  if allergy == "done" || allergy == "sunshine"
+    number_of_allergies = false 
+
+  end 
+
+end 
 
 
 
@@ -66,3 +89,11 @@ elsif correct_age == false && (willing_to_eat_garlic == false || wants_insurance
 else puts "Results inconclusive"
 
 end
+
+number_of_employees += 1
+
+puts 
+
+end 
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
