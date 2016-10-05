@@ -9,86 +9,79 @@ until number_of_employees == employees
 
   puts "What is your name?"
 
-  name = gets.chomp
+    name = gets.chomp
 
-puts "How old are you?"
+  puts "How old are you?"
 
-  age = gets.chomp.to_i
+    age = gets.chomp.to_i
 
-puts "What year were you born?"
+  puts "What year were you born?"
 
-  birth_year = gets.chomp.to_i
+    birth_year = gets.chomp.to_i
 
-  if 2016 - birth_year == age
+    if 2016 - birth_year == age
 
-    correct_age = true 
+      correct_age = true 
 
-  else correct_age = false 
+    end 
 
-  end 
+  puts "Should we order you garlic bread? Yes or No"
 
-puts "Should we order you garlic bread? Yes or No"
+    garlic_bread = gets.chomp.downcase
 
-  garlic_bread = gets.chomp.downcase
+    if garlic_bread == "yes" 
 
-  if garlic_bread == "yes" 
+      willing_to_eat_garlic = true 
 
-    willing_to_eat_garlic = true 
+    end 
 
-  else willing_to_eat_garlic = false 
+  puts "Would you like to enroll in the company's health insurance? Yes or No"
 
-  end 
+    insurance = gets.chomp.downcase
 
-puts "Would you like to enroll in the company's health insurance? Yes or No"
+    if insurance == "yes"
 
-  insurance = gets.chomp.downcase
+      wants_insurance = true 
 
-  if insurance == "yes"
-
-    wants_insurance = true 
-
-  else wants_insurance = false
-
-  end 
+    end 
 
 
-number_of_allergies = true 
+  number_of_allergies = true 
 
-until number_of_allergies == false 
+  until number_of_allergies == false 
 
-  puts "Do you have any allergies? If so type the allergy one at a time and hit enter. Type done if finished"
+    puts "Do you have any allergies? If so type the allergy one at a time and hit enter. Type done if finished"
 
-  allergy = gets.chomp
+    allergy = gets.chomp
 
-  if allergy == "done" || allergy == "sunshine"
-    number_of_allergies = false 
+    if allergy == "done" || allergy == "sunshine"
+      number_of_allergies = false 
+
+    end 
 
   end 
 
-end 
+
+  if name == "Tu Fang" || name == "Drake Cula"
+
+    puts "The employee is clearly a vampire"
 
 
+  elsif correct_age == true && (willing_to_eat_garlic == true || wants_insurance == true) 
 
-if name == "Tu Fang" || name == "Drake Cula"
+    puts "The employee is probably not a vampire"
 
-  puts "The employee is clearly a vampire"
+  elsif correct_age != true && willing_to_eat_garlic != true && wants_insurance != true
 
+    puts "The employee is almost certainly a vampire"
 
-elsif correct_age == true && (willing_to_eat_garlic == true || wants_insurance == true) 
+  elsif correct_age != true && (willing_to_eat_garlic != true || wants_insurance != true)
 
-  puts "The employee is probably not a vampire"
+    puts "The employee is probably a vampire"
 
-elsif correct_age == false && willing_to_eat_garlic == false && wants_insurance == false
+  else puts "Results inconclusive"
 
-  puts "The employee is almost certainly a vampire"
-
-elsif correct_age == false && (willing_to_eat_garlic == false || wants_insurance == false)
-
-  puts "The employee is probably a vampire"
-
-else puts "Results inconclusive"
-
-end
+  end
 
 number_of_employees += 1
 
