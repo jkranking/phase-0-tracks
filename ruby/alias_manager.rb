@@ -3,28 +3,23 @@
 def alias_creator(name)
   name = name.downcase.chars
 
-  #store vowels/consonants to variables
+  #store vowels/consonants to variables. Note: I realized when I was done with my initial program that names with "u" or "z" broke the program because they are at the end of the string i.e. vowels.index(u) + 1 = nil. So I added an extra "a" and "z" to the end of the vowel and consonants variables.  
 
-  vowels = "aeiou"
+  vowels = "aeioua"
   consonants = "bcdfghjklmnpqrstvwxyzb"
 
   #loop over array with .map! to store results in name array
 
   name.map! do |letter|
 
-    #I realized when I was done that names with "u" broke the program because vowels.index(u) + 1 = nil. So I had to make a special conditional converting "u" to "a"
-
-    if letter == "u"
-      letter = "a"
-
       #create conditionals where if vowels/consonants include "letter" then find the index of the vowel/consonant by using the "letter"
 
-      elsif vowels.include? letter
+    if vowels.include? letter
       letter = vowels[vowels.index(letter) +1]
       elsif consonants.include? letter
       letter = consonants[consonants.index(letter) +1]
 
-      #the last alternative condition is letter equals " "
+      #the last alternative condition is letter equals the space between names
 
       else letter = " " 
     end 
