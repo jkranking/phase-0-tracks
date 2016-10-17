@@ -1,24 +1,24 @@
-Breed ------------------------
-chocolate lab
+# Breed ------------------------
+# chocolate lab
 
-CHARACTERISTICS ----------------
-hair length: short
-Friendly: yes
-fullgrown weight range: 55 - 75lb
-Name: varies
-Color: varies
+# CHARACTERISTICS ----------------
+# hair length: short
+# Friendly: yes
+# fullgrown weight range: 55 - 75lb
+# Name: varies
+# Color: varies
 
-BEHAVIOR -----------------------
-Jump
-Hug
-Fetch
+# BEHAVIOR -----------------------
+# Jump
+# Hug
+# Fetch
 
-######
+# ######
 
-irb:
+# irb:
 
-class Puppy
-end 
+# class Puppy
+# end 
 
 #how to make a new instance of the class Puppy and save as a variable
 
@@ -48,10 +48,10 @@ str = String.new
 str.length
 str.empty?
 str += "huh."
-In the past, we have often made new instances of the String class by declaring them literally:
+# In the past, we have often made new instances of the String class by declaring them literally:
 
 str = "some string"
-... but String.new will work too, and even takes an argument for what characters you would like to put in the string. Try it:
+# ... but String.new will work too, and even takes an argument for what characters you would like to put in the string. Try it:
 
 greeting = String.new("hello")
 greeting.length
