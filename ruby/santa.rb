@@ -21,7 +21,7 @@ class Santa
     puts "Initializing Santa instance..."
     @ethnicity = ethnicity
     @gender = gender
-    @age = rand(100)
+    @age = rand(0..140)
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
   end 
 
