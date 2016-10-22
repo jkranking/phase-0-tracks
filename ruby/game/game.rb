@@ -83,6 +83,7 @@ while !game.is_over
   puts "Player 2: you have #{game.guess_count} guesses left."
   puts "Guess the word or a letter of the word."
   game.guess = gets.chomp.downcase
+  game.guess_list
   if game.guess.length == 1
     puts game.guess_letter
     game.count
@@ -91,7 +92,6 @@ while !game.is_over
     game.count
   else puts "incorrect input"
   end 
-    game.guess_list
     puts game.guess_letter_win
     puts game.word_str
 end 
