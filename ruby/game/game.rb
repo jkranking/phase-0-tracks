@@ -71,29 +71,29 @@ end
 # game.guess_letter
 
 
-# puts "Player 1: please give a secret word."
-# secret_word = gets.chomp
-# game = Game.new(secret_word)
-# system "clear"
+puts "Player 1: please give a secret word."
+secret_word = gets.chomp
+game = Game.new(secret_word)
+system "clear"
 
-# puts "Player 2: Here is the secret word"
-# p game.word_str
+puts "Player 2: Here is the secret word"
+p game.word_str
 
-# while !game.is_over 
-#   puts "Player 2: you have #{game.guess_count} guesses left."
-#   puts "Guess the word or a letter of the word."
-#   game.guess = gets.chomp.downcase
-#   if game.guess.length == 1
-#     puts game.guess_letter
-#     game.count
-#   elsif game.guess.length == game.secret_word.length
-#     puts game.guess_word
-#     game.count
-#   else puts "incorrect input"
-#   end 
-#     game.guess_list
-#     puts game.guess_letter_win
-#     puts game.word_str
-# end 
+while !game.is_over 
+  puts "Player 2: you have #{game.guess_count} guesses left."
+  puts "Guess the word or a letter of the word."
+  game.guess = gets.chomp.downcase
+  if game.guess.length == 1
+    puts game.guess_letter
+    game.count
+  elsif game.guess.length == game.secret_word.length
+    puts game.guess_word
+    game.count
+  else puts "incorrect input"
+  end 
+    game.guess_list
+    puts game.guess_letter_win
+    puts game.word_str
+end 
 
 
