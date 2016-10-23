@@ -26,17 +26,17 @@ class Game
   end 
 
   def guess_letter_win
-    if (@guess_count < 1 && @secret_word == @word_str) || @secret_word == @word_str
-      @is_over  = true
-      "You won the game!"
-    elsif @guess_count < 1 && !(@secret_word == @word_str)
+    if @guess_count < 1 && !(@secret_word == @word_str)
       @is_over = true
       "You lost the game! You're a terrible person!"
+    elsif @secret_word == @word_str
+      @is_over  = true
+      "You won the game!"
     else
     end 
   end  
 
-  def guess_word
+  def guess_word_win
     if @secret_word  == @guess
       @is_over  = true
       "You won the game!"
@@ -58,10 +58,7 @@ class Game
   end 
 
   def word_str
-    if !@is_over
-    @word_str
-    else 
-    end 
+    @word_str if !@is_over
   end 
 
 end
@@ -88,7 +85,7 @@ while !game.is_over
     puts game.guess_letter
     game.count
   elsif game.guess.length == game.secret_word.length
-    puts game.guess_word
+    puts game.guess_word_win
     game.count
   else puts "incorrect input"
   end 

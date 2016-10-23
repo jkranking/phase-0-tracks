@@ -10,7 +10,7 @@ let(:game) { Game.new("h") }
 
   it "guess the word" do
     game.guess = "h"
-    expect(game.guess_word).to eq ("You won the game!")
+    expect(game.guess_word_win).to eq ("You won the game!")
   end 
 
   it "store the guesses" do
@@ -21,7 +21,7 @@ let(:game) { Game.new("h") }
   it "if the user guesses all the letters then they win" do
     game.guess = "h"
     game.guess_letter
-    expect(game.guess_word).to eq("You won the game!")
+    expect(game.guess_word_win).to eq("You won the game!")
   end 
 
   it "guess count goes down by 1" do
