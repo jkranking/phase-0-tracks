@@ -1,0 +1,57 @@
+sqlite> SELECT * FROM stereotypes;
+1|loves guns|false|1
+2|fat|false|1
+3|has moose|true|2
+4|apologetic|true|2
+5|loves maple syrup|true|2
+sqlite> 
+
+sqlite> UPDATE stereotypes SET name="overweight" WHERE name="fat";
+sqlite> SELECT * FROM stereotypes;
+1|loves guns|false|1
+2|overweight|false|1
+3|has moose|true|2
+4|apologetic|true|2
+5|loves maple syrup|true|2
+sqlite> 
+
+sqlite> SELECT * FROM countries, stereotypes WHERE stereotypes.country_id = countries.id;
+id|name|id|name|funny|country_id
+1|USA|1|loves guns|false|1
+1|USA|2|fat|false|1
+2|CANADA|3|has moose|true|2
+2|CANADA|4|apologetic|true|2
+2|CANADA|5|loves maple syrup|true|2
+sqlite> 
+
+
+sqlite> SELECT stereotypes.name, countries.name FROM stereotypes JOIN countries ON stereotypes.country_id = countries.id;
+name|name
+loves guns|USA
+fat|USA
+has moose|CANADA
+apologetic|CANADA
+loves maple syrup|CANADA
+
+sqlite> delete from stereotypes where name = "loves guns";
+sqlite> select * from stereotypes;
+2|fat|false|1
+3|has moose|true|2
+4|apologetic|true|2
+5|loves maple syrup|true|2
+
+
+inner join
+
+sqlite> SELECT stereotypes.name, stereotypes.funny from stereotypes inner join countries on stereotypes.country_id = countries.id where country_id = 2;
+has moose|true
+apologetic|true
+loves maple syrup|true
+
+left join
+
+sqlite> SELECT stereotypes.name from stereotypes left join countries on stereotypes.country_id = countries.id where country_id = 2;
+has moose
+apologetic
+loves maple syrup
+sqlite> 
