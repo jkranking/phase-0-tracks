@@ -1,0 +1,19 @@
+joining 3 tables
+
+sqlite> select * from businesses, users, reviews where business_id = businesses.id and user_id = users.id;
+1|Amir's Towing|2|Steven|Wonder|1|5|great biz|1|2
+2|Lotus Yoga|1|Bradford|Pitt|2|3|not that great|2|1
+sqlite> 
+
+
+joining 3 tables with business, user, rating, comment
+
+sqlite> select businesses.name, users.last_name, reviews.stars, reviews.comment from businesses, users, reviews where business_id = businesses.id and user_id = users.id and reviews.stars = 3;
+Lotus Yoga|Pitt|3|not that great
+
+
+joining 3 tables only showing reviews for 1 business
+
+sqlite> select businesses.name, users.last_name, reviews.stars, reviews.comment from businesses, users, reviews where business_id = businesses.id and user_id = users.id and businesses.id = 1;
+Amir's Towing|Wonder|5|great biz
+sqlite> 
