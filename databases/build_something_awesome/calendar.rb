@@ -54,6 +54,9 @@ end
 def lookup_by_event(db, event)
   positiive_search = false
   db.execute("SELECT dates.date, events.name, events.time, events.location FROM events, dates WHERE events.date_id = dates.id") do |row|
+
+    # Instead of running "SELECT" to find the specific event, I'm searching for the event on the row via include? (as shown below) so that users don't have type the exact event to pull it up and can instead type a keyword which will now pull up the event from the database. I use this syntax throughout the program.  
+
     if row[1].include? event
       puts "On #{row[0]}, your event, #{row[1]}, is at #{row[3]} and is located at #{row[2]}"
       positive_search = true 
