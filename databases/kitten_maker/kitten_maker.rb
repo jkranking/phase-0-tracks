@@ -23,7 +23,7 @@ SQL
 db.execute(create_table_cmd)
 
 # add a test kitten
-# db.execute("INSERT INTO kittens (name, age) VALUES ('Bob', 10)")
+db.execute("INSERT INTO kittens (name, age) VALUES ('Bob', 10)")
 
 # add LOOOOTS of kittens!
 # so. many. kittens. 
@@ -32,9 +32,26 @@ def create_kitten(db, name, age)
   db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age])
 end
 
-10000.times do
-  create_kitten(db, Faker::Name.name, 0)
-end
+# def update_kitten(db, name)
+#   db.execute("UPDATE kittens SET name=? WHERE name='Jeff'", [name])
+# end 
+
+# def update_kitten1(db, column)
+#   db.execute("UPDATE kittens SET '#{column}'='Jeff' WHERE name='Bob'")
+# end 
+
+# def update_kitten1(db, column)
+#   db.execute("UPDATE kittens SET ?='Jeff' WHERE name='Bob'", [column])
+# end 
+
+
+
+# update_kitten(db, "Bob")
+
+# update_kitten1(db, 'name')
+# 10000.times do
+#   create_kitten(db, Faker::Name.name, 0)
+# end
 
 # explore ORM by retrieving data
 # kittens = db.execute("SELECT * FROM kittens")
