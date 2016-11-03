@@ -159,4 +159,3 @@ loop do
 end 
 
 puts "Thanks for visiting your Calendar!"
-
