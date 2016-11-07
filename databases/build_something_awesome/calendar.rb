@@ -113,7 +113,6 @@ loop do
   puts "to add a new event, type 'add event'"
   puts "to edit or delete an event, type 'edit'"
   puts "to exit your Calendar, type 'quit'"
-
   response = gets.chomp.downcase
   break if response == 'quit'
   if response == "date"
