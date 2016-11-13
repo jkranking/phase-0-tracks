@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Management System</title>
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="student_new">Add Student</a></li>
+        </ul>
+        <form action="/student_search" method="GET", class="navbar-form navbar-right">
+          <button type="submit">Search</button>
+          <input type="text" name="name" placeholder="Student Name">
+        </form>
+      </div>
+    </nav>
+      <div class="container">
+      <%= yield %>
+      </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

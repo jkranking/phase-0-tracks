@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead">
+    <tr>
+      <th>#</th>
+      <th>Student Name</th>
+      <th>Campus</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <% student = @student %>
+  <tr>
+    <td><%= student['id'] %></a></td>
+    <td><%= student['name'] %></td>
+    <td><%= student['campus'] %></td>
+    <td><%= student['age'] %></td>
+  </tr>
+</table>
+
+<h3><a href="/update_student/<%= student[0] %>">Update Student</a></h3>
+<h3><a href="/delete/<%= student[0] %>">Delete Student</a></h3>

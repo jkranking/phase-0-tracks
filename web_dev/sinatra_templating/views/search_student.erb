@@ -1,29 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <form action="/student_search" method="GET">
-    <input type="text" name="name" placeholder="Name">
-    <button type="submit">Search</button>
-  </form>
-  <% if @name_array %>
-  <table>
-  <tr>
-    <th> ID: </th>
-    <th> Name: </th>
-    <th> Campus: </th>
-    <th> Age: </th>
-  </tr>
-
-  <tr>    
-    <td><%= @name_array[0] %></td>
-    <td><%= @name_array[1] %></td>
-    <td><%= @name_array[2] %></td>
-    <td><%= @name_array[3] %></td>
-  </tr>
-  </table>
+<% if @name_array %>
+  <% @name_array.each do |name_array| %>
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th>#</th>
+          <th>Student Name</th>
+          <th>Campus</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tr>    
+        <td><%= name_array[0] %></td>
+        <td><%= name_array[1] %></td>
+        <td><%= name_array[2] %></td>
+        <td><%= name_array[3] %></td>
+      </tr>
+    </table>
   <% end %>
-</body>
-</html>
+<% end %>
