@@ -16,8 +16,8 @@ get '/:id' do
   erb :show
 end 
 
-get '/student_new' do
-  erb :new_student
+get '/student/new' do
+  erb :new
 end
 
 post '/students' do
@@ -40,13 +40,14 @@ get '/delete/:id' do
   redirect '/'
 end 
   
-get '/student_search' do 
+get '/student/search' do 
   name = params['name']
+  name = name.downcase
   if name 
     name_array = []
     student = db.execute("SELECT * FROM students")
     student.each do |row|
-      if row[1].include? name
+      if row[1].downcase.include? name
         name_array.push(row)
       end
     end 
